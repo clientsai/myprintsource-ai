@@ -13,10 +13,10 @@ export default function HomePage() {
               <Image
                 src="/brand/logo-myprintsource.png"
                 alt="MyPrintSource - Powered by AI"
-                width={320}
-                height={80}
+                width={280}
+                height={70}
                 priority
-                className="h-24 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
             <nav className="hidden md:flex items-center space-x-8">
@@ -33,22 +33,20 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section - Enhanced */}
-      <section className="pt-32 pb-24 relative overflow-hidden page-transition">
+      <section className="pt-32 pb-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-brand-secondary/5"></div>
         <div className="container mx-auto px-6 relative">
           <div className="text-center max-w-5xl mx-auto">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-brand-primary/10 to-brand-secondary/10 px-4 py-2 rounded-full mb-6 border border-brand-primary/20 hero-element">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-brand-primary/10 to-brand-secondary/10 px-4 py-2 rounded-full mb-6 border border-brand-primary/20">
               <Sparkles className="w-4 h-4 text-brand-primary" />
               <span className="text-sm font-medium text-brand-secondary">No Designers. No Copywriters. No Guesswork.</span>
             </div>
-            <h1 className="text-7xl font-bold text-gray-950 mb-6 leading-tight tracking-tight hero-element">
-              AI-Generated Marketing Materials
+            <h1 className="text-7xl font-bold text-gray-950 mb-6 leading-tight tracking-tight">
+              Stop Wasting Money on Marketing Materials That{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent">Don&apos;t Convert</span>
             </h1>
-            <p className="text-3xl text-gray-700 font-medium mb-4 max-w-4xl mx-auto hero-element">
-              Professional campaigns designed, printed, and delivered in 60 minutes
-            </p>
-            <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-4xl mx-auto hero-element">
-              Our AI analyzes your business and creates conversion-optimized marketing materials—no designers, no copywriters, no guesswork. From concept to delivery faster than scheduling a design meeting.
+            <p className="text-2xl text-gray-600 mb-10 leading-relaxed max-w-4xl mx-auto">
+              Our AI analyzes your business, studies your ideal customers, and creates world-class printed marketing—designed by the same intelligence that powers Fortune 500 campaigns. Ready to print. Delivered to your door. All in under 60 minutes.
             </p>
             <div className="flex items-center justify-center space-x-4 mb-8">
               <Link href="/register" className="btn-primary text-lg px-10 py-4 h-auto shadow-lg hover:shadow-xl transition-shadow">
@@ -395,9 +393,9 @@ export default function HomePage() {
                 <Image
                   src="/brand/logo-myprintsource.png"
                   alt="MyPrintSource"
-                  width={240}
-                  height={60}
-                  className="h-16 w-auto mb-6"
+                  width={200}
+                  height={50}
+                  className="h-14 w-auto mb-6"
                 />
               </Link>
               <p className="text-gray-600 leading-relaxed mb-6">

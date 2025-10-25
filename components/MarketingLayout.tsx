@@ -12,10 +12,10 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
               <Image
                 src="/brand/logo-myprintsource.png"
                 alt="MyPrintSource - Powered by AI"
-                width={320}
-                height={80}
+                width={280}
+                height={70}
                 priority
-                className="h-24 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
             <nav className="flex items-center space-x-6">
@@ -47,9 +47,9 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
                 <Image
                   src="/brand/logo-myprintsource.png"
                   alt="MyPrintSource"
-                  width={240}
-                  height={60}
-                  className="h-16 w-auto mb-4"
+                  width={200}
+                  height={50}
+                  className="h-14 w-auto mb-4"
                 />
               </Link>
               <p className="text-sm text-gray-600 leading-relaxed">
