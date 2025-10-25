@@ -37,16 +37,14 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-brand-secondary/5"></div>
         <div className="container mx-auto px-6 relative">
           <div className="text-center max-w-5xl mx-auto">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-brand-primary/10 to-brand-secondary/10 px-4 py-2 rounded-full mb-6 border border-brand-primary/20">
-              <Sparkles className="w-4 h-4 text-brand-primary" />
-              <span className="text-sm font-medium text-brand-secondary">No Designers. No Copywriters. No Guesswork.</span>
-            </div>
             <h1 className="text-7xl font-bold text-gray-950 mb-6 leading-tight tracking-tight">
-              Stop Wasting Money on Marketing Materials That{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent">Don&apos;t Convert</span>
+              AI-Generated Marketing Materials
             </h1>
-            <p className="text-2xl text-gray-600 mb-10 leading-relaxed max-w-4xl mx-auto">
-              Our AI analyzes your business, studies your ideal customers, and creates world-class printed marketing—designed by the same intelligence that powers Fortune 500 campaigns. Ready to print. Delivered to your door. All in under 60 minutes.
+            <p className="text-3xl text-gray-700 mb-8 leading-relaxed max-w-4xl mx-auto font-medium">
+              In the time it takes to schedule a design meeting, our AI analyzes your business and delivers print-ready marketing materials to your door.
+            </p>
+            <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto">
+              3,200+ businesses use MyPrintSource to generate campaigns that achieve 3.7x higher response rates than traditionally designed materials—with an average delivery time of 47 minutes.
             </p>
             <div className="flex items-center justify-center space-x-4 mb-8">
               <Link href="/register" className="btn-primary text-lg px-10 py-4 h-auto shadow-lg hover:shadow-xl transition-shadow">
