@@ -32,7 +32,7 @@ export default function DocsPage() {
               </p>
             </Link>
 
-            <Link href="/api/v1/docs" className="card p-8 hover:shadow-xl transition-shadow group">
+            <Link href="/api-docs" className="card p-8 hover:shadow-xl transition-shadow group">
               <div className="w-12 h-12 bg-gradient-to-br from-brand-secondary to-brand-primary rounded-xl flex items-center justify-center mb-4">
                 <Code className="w-6 h-6 text-white" />
               </div>
@@ -102,7 +102,7 @@ export default function DocsPage() {
                   <p className="text-sm text-gray-600">Step-by-step guide to generating your first marketing materials</p>
                 </div>
               </Link>
-              <Link href="/api/v1/docs" className="flex items-start space-x-3 p-4 hover:bg-gray-50 rounded-lg transition-colors">
+              <Link href="/api-docs" className="flex items-start space-x-3 p-4 hover:bg-gray-50 rounded-lg transition-colors">
                 <div className="w-2 h-2 bg-brand-secondary rounded-full mt-2"></div>
                 <div>
                   <h4 className="font-semibold text-gray-950 mb-1">API Authentication</h4>

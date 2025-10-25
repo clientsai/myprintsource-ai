@@ -143,7 +143,7 @@ export default function AboutPage() {
                   <strong>It started with a $4,300 mistake.</strong>
                 </p>
                 <p>
-                  Our founder spent three weeks and $4,300 working with a &quot;top-rated&quot; designer and copywriter on direct mail postcards for his local business. The materials looked beautiful. Professional. Award-worthy.
+                  Our team spent three weeks and $4,300 working with a &quot;top-rated&quot; designer and copywriter on direct mail postcards for a local business. The materials looked beautiful. Professional. Award-worthy.
                 </p>
                 <p>
                   <strong>They generated exactly 3 calls from 5,000 pieces mailed.</strong>

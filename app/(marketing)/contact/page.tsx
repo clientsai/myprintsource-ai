@@ -95,9 +95,9 @@ export default function ContactPage() {
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <h3 className="font-semibold text-gray-950 mb-2">Visit Us</h3>
-              <p className="text-sm text-gray-600 mb-3">San Francisco HQ</p>
+              <p className="text-sm text-gray-600 mb-3">Milwaukee Office</p>
               <p className="text-brand-primary text-sm">
-                123 Print Street<br/>San Francisco, CA 94105
+                2850 S Kinnickinnic Ave<br/>Milwaukee, WI 53207
               </p>
             </div>
           </div>

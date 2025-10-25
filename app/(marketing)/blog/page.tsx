@@ -16,7 +16,7 @@ const blogPosts = [
     category: 'ROI & Results',
     date: 'January 15, 2025',
     readTime: '8 min read',
-    author: 'Dr. Sarah Chen',
+    author: 'MyPrintSource.com Team',
     image: '/blog/ai-roi.jpg',
   },
   {
@@ -26,7 +26,7 @@ const blogPosts = [
     category: 'Industry Trends',
     date: 'January 12, 2025',
     readTime: '6 min read',
-    author: 'Michael Torres',
+    author: 'MyPrintSource.com Team',
     image: '/blog/ai-vs-designers.jpg',
   },
   {
@@ -36,7 +36,7 @@ const blogPosts = [
     category: 'Direct Mail',
     date: 'January 10, 2025',
     readTime: '10 min read',
-    author: 'Jennifer Park',
+    author: 'MyPrintSource.com Team',
     image: '/blog/direct-mail-revival.jpg',
   },
   {
@@ -46,7 +46,7 @@ const blogPosts = [
     category: 'Copywriting',
     date: 'January 8, 2025',
     readTime: '7 min read',
-    author: 'David Ogilvy Jr.',
+    author: 'MyPrintSource.com Team',
     image: '/blog/ai-copywriting.jpg',
   },
   {
@@ -56,7 +56,7 @@ const blogPosts = [
     category: 'Best Practices',
     date: 'January 5, 2025',
     readTime: '9 min read',
-    author: 'Lisa Wong',
+    author: 'MyPrintSource.com Team',
     image: '/blog/print-mistakes.jpg',
   },
   {
@@ -66,7 +66,7 @@ const blogPosts = [
     category: 'AI Technology',
     date: 'January 3, 2025',
     readTime: '8 min read',
-    author: 'Dr. Alex Kumar',
+    author: 'MyPrintSource.com Team',
     image: '/blog/ai-customer-analysis.jpg',
   },
 ]

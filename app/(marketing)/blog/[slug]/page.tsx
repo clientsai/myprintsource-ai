@@ -9,7 +9,7 @@ const blogContent: { [key: string]: any } = {
     category: 'ROI & Results',
     date: 'January 15, 2025',
     readTime: '8 min read',
-    author: 'Dr. Sarah Chen',
+    author: 'MyPrintSource.com Team',
     content: `
 # The $47,000 Problem Every Small Business Faces
 
@@ -93,7 +93,7 @@ AI-powered marketing is precision engineering. You invest nothing upfront, get r
 
 ---
 
-*Dr. Sarah Chen is Chief Data Scientist at MyPrintSource, where she leads the AI team that has analyzed over 10 million successful marketing campaigns to build the world's most advanced print design AI.*
+*The MyPrintSource.com Team has analyzed over 10 million successful marketing campaigns to build the world's most advanced print design AI.*
     `,
   },
   'death-of-graphic-designers': {
@@ -101,7 +101,7 @@ AI-powered marketing is precision engineering. You invest nothing upfront, get r
     category: 'Industry Trends',
     date: 'January 12, 2025',
     readTime: '6 min read',
-    author: 'Michael Torres',
+    author: 'MyPrintSource.com Team',
     content: `
 # Your Designer Just Became Obsolete
 
@@ -234,7 +234,7 @@ The real question is: How much longer will you pay thousands for guesswork when 
 
 ---
 
-*Michael Torres is a former creative director who now advises businesses on AI-powered marketing automation. After 15 years in traditional design agencies, he's watched AI accomplish in minutes what used to take his team weeks.*
+*The MyPrintSource.com Team brings decades of combined experience in creative direction and marketing automation, watching AI accomplish in minutes what used to take traditional teams weeks.*
     `,
   },
   'direct-mail-not-dead': {
@@ -242,7 +242,7 @@ The real question is: How much longer will you pay thousands for guesswork when 
     category: 'Direct Mail',
     date: 'January 10, 2025',
     readTime: '10 min read',
-    author: 'Jennifer Park',
+    author: 'MyPrintSource.com Team',
     content: `
 # The Marketing Channel Everyone Abandoned Is Now the Most Profitable
 
@@ -432,7 +432,7 @@ Let's do the actual math:
 
 ---
 
-*Jennifer Park is a direct response marketing specialist who has managed over $40M in direct mail campaigns. She's watched AI transform the channel from "dying" to "highest ROI" in less than two years.*
+*The MyPrintSource.com Team specializes in direct response marketing and has managed over $40M in direct mail campaigns, watching AI transform the channel from "dying" to "highest ROI" in less than two years.*
     `,
   },
   'stop-wasting-money-bad-copy': {
@@ -440,7 +440,7 @@ Let's do the actual math:
     category: 'Copywriting',
     date: 'January 8, 2025',
     readTime: '7 min read',
-    author: 'David Ogilvy Jr.',
+    author: 'MyPrintSource.com Team',
     content: `
 # Your Copywriter Is Costing You a Fortune
 
@@ -603,7 +603,7 @@ If it doesn't outperform your current marketing, you pay nothing.
 
 ---
 
-*David Ogilvy Jr. is a direct response copywriting consultant who trained under traditional copywriting masters before transitioning to AI-powered copy generation. He's analyzed over 100,000 marketing campaigns and watched AI consistently outperform even the highest-paid human copywriters.*
+*The MyPrintSource.com Team brings expertise in direct response copywriting, having analyzed over 100,000 marketing campaigns and watched AI consistently outperform even the highest-paid human copywriters.*
     `,
   },
   'print-marketing-mistakes-killing-conversions': {
@@ -611,7 +611,7 @@ If it doesn't outperform your current marketing, you pay nothing.
     category: 'Best Practices',
     date: 'January 5, 2025',
     readTime: '9 min read',
-    author: 'Lisa Wong',
+    author: 'MyPrintSource.com Team',
     content: `
 # You're Making at Least 5 of These Mistakes
 
@@ -814,7 +814,7 @@ Your first AI-generated campaign is free. See your materials analyzed for conver
 
 ---
 
-*Lisa Wong is a direct response marketing consultant who has audited over 10,000 failed print campaigns. She specializes in identifying the hidden mistakes that kill conversions and helping businesses implement AI-powered optimization to multiply response rates.*
+*The MyPrintSource.com Team has audited over 10,000 failed print campaigns, specializing in identifying the hidden mistakes that kill conversions and helping businesses implement AI-powered optimization to multiply response rates.*
     `,
   },
   'ai-understands-your-customers': {
@@ -822,7 +822,7 @@ Your first AI-generated campaign is free. See your materials analyzed for conver
     category: 'AI Technology',
     date: 'January 3, 2025',
     readTime: '8 min read',
-    author: 'Dr. Alex Kumar',
+    author: 'MyPrintSource.com Team',
     content: `
 # Your Website Contains Everything AI Needs to Predict What Your Customers Want
 
@@ -1027,7 +1027,7 @@ Your first campaign is free. See what AI discovers about your customers in 90 se
 
 ---
 
-*Dr. Alex Kumar leads the AI research team at MyPrintSource, where his work focuses on natural language processing and behavioral analysis. His algorithms have analyzed over 100 million customer interactions to predict buying behavior with 94% accuracy.*
+*The MyPrintSource.com Team specializes in AI research, natural language processing, and behavioral analysis. Our algorithms have analyzed over 100 million customer interactions to predict buying behavior with 94% accuracy.*
     `,
   },
 }

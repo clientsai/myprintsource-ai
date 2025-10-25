@@ -74,7 +74,7 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-950 mb-3">Contact Us</h2>
               <p>For privacy-related questions or to exercise your rights, contact us at:</p>
-              <p className="mt-2">Email: privacy@myprintsource.com<br />Address: 123 Print Street, San Francisco, CA 94105</p>
+              <p className="mt-2">Email: privacy@myprintsource.com<br />Address: 2850 S Kinnickinnic Ave, Milwaukee, WI 53207</p>
             </section>
           </div>
         </div>
