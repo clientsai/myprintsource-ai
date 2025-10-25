@@ -24,7 +24,7 @@ export default function SecurityPage() {
       <div className="pt-32 pb-16">
         <div className="container mx-auto px-6 max-w-4xl">
           <h1 className="text-4xl font-bold mb-4">Security at MyPrintSource</h1>
-          <p className="text-xl text-gray-600 mb-12">Your data security is our top priority. We implement enterprise-grade security measures to protect your files and information.</p>
+          <p className="text-xl text-gray-600 mb-12">Your data security is our top priority. We implement enterprise-grade security measures to protect your business data and information.</p>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="card p-6">
@@ -32,7 +32,7 @@ export default function SecurityPage() {
                 <Lock className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">End-to-End Encryption</h3>
-              <p className="text-gray-600">All file uploads and data transmissions are encrypted using TLS 1.3. Files are encrypted at rest using AES-256 encryption.</p>
+              <p className="text-gray-600">All data transmissions are encrypted using TLS 1.3. All business data and generated materials are encrypted at rest using AES-256 encryption.</p>
             </div>
 
             <div className="card p-6">
@@ -63,7 +63,7 @@ export default function SecurityPage() {
           <div className="prose max-w-none space-y-6 text-gray-700">
             <section>
               <h2 className="text-2xl font-semibold text-gray-950 mb-3">AI Processing Security</h2>
-              <p>Our AI file optimization occurs in isolated, secure environments. Your files are never used to train our models without explicit consent, and are automatically deleted after production completion per your retention settings.</p>
+              <p>Our AI design generation occurs in isolated, secure environments. Your business data is never used to train our models without explicit consent, and is automatically deleted after campaign completion per your retention settings.</p>
             </section>
 
             <section>

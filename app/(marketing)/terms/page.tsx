@@ -33,7 +33,7 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-2xl font-semibold text-gray-950 mb-3">Service Description</h2>
-              <p>MyPrintSource provides an AI-powered platform for printing services, including automated file optimization, instant quoting, and production management. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.</p>
+              <p>MyPrintSource provides an AI-powered platform for marketing design generation and printing services, including automated design creation, instant quoting, and production management. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.</p>
             </section>
 
             <section>
@@ -41,7 +41,7 @@ export default function TermsPage() {
               <p>You agree to:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Provide accurate account and billing information</li>
-                <li>Upload only files you have the legal right to reproduce</li>
+                <li>Use AI-generated materials only for purposes you have the legal right to reproduce</li>
                 <li>Comply with all applicable laws and regulations</li>
                 <li>Not use our services for illegal or unauthorized purposes</li>
                 <li>Not interfere with or disrupt our platform or servers</li>
@@ -50,7 +50,7 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-2xl font-semibold text-gray-950 mb-3">Intellectual Property</h2>
-              <p>You retain all rights to your uploaded designs and files. By using our service, you grant us a limited license to process, optimize, and print your files. Our AI technology, platform, and branding remain our exclusive intellectual property.</p>
+              <p>You retain all rights to AI-generated designs and materials we create for you. By using our service, you grant us a limited license to generate, process, and print materials on your behalf. Our AI technology, platform, and branding remain our exclusive intellectual property.</p>
             </section>
 
             <section>
@@ -60,7 +60,7 @@ export default function TermsPage() {
 
             <section>
               <h2 className="text-2xl font-semibold text-gray-950 mb-3">Quality Guarantee</h2>
-              <p>We guarantee print quality and will reprint orders that do not meet our standards at no additional cost. Claims must be made within 14 days of delivery. Our AI optimization is provided as-is, and you are responsible for final approval of all files.</p>
+              <p>We guarantee print quality and will reprint orders that do not meet our standards at no additional cost. Claims must be made within 14 days of delivery. Our AI-generated designs are provided as-is, and you are responsible for final approval of all materials before production.</p>
             </section>
 
             <section>

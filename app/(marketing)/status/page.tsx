@@ -11,7 +11,7 @@ export default function StatusPage() {
     { name: 'AI Design Engine', status: 'operational', uptime: '99.99%', responseTime: '127ms' },
     { name: 'Print Production', status: 'operational', uptime: '99.98%', responseTime: '—' },
     { name: 'API Services', status: 'operational', uptime: '99.99%', responseTime: '89ms' },
-    { name: 'File Upload & Processing', status: 'operational', uptime: '100%', responseTime: '1.2s' },
+    { name: 'Campaign Generation', status: 'operational', uptime: '100%', responseTime: '1.2s' },
     { name: 'Payment Processing', status: 'operational', uptime: '99.99%', responseTime: '340ms' },
     { name: 'Delivery Tracking', status: 'operational', uptime: '100%', responseTime: '156ms' },
   ]

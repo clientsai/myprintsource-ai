@@ -36,7 +36,7 @@ export default function PrivacyPage() {
               <p>We collect information you provide directly to us, including:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Account information (name, email, password)</li>
-                <li>Design files and project specifications</li>
+                <li>Business information and campaign specifications</li>
                 <li>Payment and billing information</li>
                 <li>Communication preferences and support inquiries</li>
               </ul>
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
               <p>We use the information we collect to:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Process your print orders and deliver services</li>
-                <li>Optimize files using our AI technology</li>
+                <li>Generate marketing materials using our AI technology</li>
                 <li>Provide customer support and respond to inquiries</li>
                 <li>Improve our AI algorithms and platform features</li>
                 <li>Send service updates and marketing communications (with your consent)</li>
@@ -56,7 +56,7 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className="text-2xl font-semibold text-gray-950 mb-3">Data Security</h2>
-              <p>We implement industry-standard security measures to protect your personal information and uploaded files. All data is encrypted in transit and at rest. Our AI processing occurs in secure, isolated environments.</p>
+              <p>We implement industry-standard security measures to protect your personal information and business data. All data is encrypted in transit and at rest. Our AI processing occurs in secure, isolated environments.</p>
             </section>
 
             <section>

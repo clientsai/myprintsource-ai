@@ -3,8 +3,8 @@ import './globals.css'
 import { Toaster } from 'react-hot-toast'
 
 export const metadata: Metadata = {
-  title: 'MyPrintSource - AI-Powered Printing Platform | Instant Quotes & Smart Optimization',
-  description: 'Upload your designs and let AI optimize, quote, and produce professional print materials in seconds. Intelligent file analysis, automated quality checks, and real-time production tracking.',
+  title: 'MyPrintSource - AI-Generated Marketing Materials | Professional Campaigns in 60 Minutes',
+  description: 'AI-generated marketing materials designed, printed, and delivered in 60 minutes. No designers, no copywriters, no guesswork—just professional campaigns that convert.',
 }
 
 export default function RootLayout({
