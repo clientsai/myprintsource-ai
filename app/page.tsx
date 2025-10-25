@@ -9,16 +9,16 @@ export default function HomePage() {
       <header className="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
+            <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
               <Image
                 src="/brand/logo-myprintsource.png"
                 alt="MyPrintSource - Powered by AI"
-                width={200}
-                height={50}
+                width={240}
+                height={60}
                 priority
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
-            </div>
+            </Link>
             <nav className="flex items-center space-x-6">
               <Link href="/login" className="text-gray-600 hover:text-gray-950 transition-colors">
                 Sign In

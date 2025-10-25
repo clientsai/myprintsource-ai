@@ -80,13 +80,13 @@ export default function DashboardLayout({
         <div className="flex h-full flex-col">
           {/* Logo */}
           <div className="flex h-16 items-center justify-between px-6 border-b">
-            <Link href="/dashboard" className="flex items-center">
+            <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
               <Image
                 src="/brand/logo-myprintsource.png"
                 alt="MyPrintSource AI"
-                width={160}
-                height={40}
-                className="h-10 w-auto"
+                width={180}
+                height={45}
+                className="h-12 w-auto"
               />
             </Link>
             <button
