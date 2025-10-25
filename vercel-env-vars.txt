@@ -1,0 +1,18 @@
+VERCEL ENVIRONMENT VARIABLES
+Copy these to Vercel Dashboard → Settings → Environment Variables
+
+NEXT_PUBLIC_SUPABASE_URL=https://autmdlacdenfbggqsgmz.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF1dG1kbGFjZGVuZmJnZ3FzZ216Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgwNzAyODIsImV4cCI6MjA3MzY0NjI4Mn0.le4PLLl3PqoSxcQ9Fsix2ooREYR_RRow481loAWGUf8
+SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF1dG1kbGFjZGVuZmJnZ3FzZ216Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1ODA3MDI4MiwiZXhwIjoyMDczNjQ2MjgyfQ.N1NHqp1MK5ZCRuzsBHkdtJvS2yejM85TJ7ZpB1rsuzA
+NEXTAUTH_URL=https://[YOUR-VERCEL-URL].vercel.app
+NEXTAUTH_SECRET=QJtkmhgGFJPeUs+UytDcPMCi2/BnQu2EVk01qiklu4w=
+NEXT_PUBLIC_APP_URL=https://[YOUR-VERCEL-URL].vercel.app
+RESEND_API_KEY=re_your_api_key
+API_RATE_LIMIT=1000
+API_KEY_SALT=07436d30c4fde05c7ef4c63c61e7ba65
+CLIENTS_AI_WEBHOOK_SECRET=shared-secret-with-clients-ai
+
+NOTES:
+1. Replace [YOUR-VERCEL-URL] with your actual Vercel deployment URL
+2. Get RESEND_API_KEY from resend.com if you want email notifications
+3. All Supabase keys are already configured for your project
