@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabaseAdmin } from '@/lib/supabase-admin'
 import { z } from 'zod'
 
 const registerSchema = z.object({
@@ -15,17 +14,6 @@ export async function POST(req: NextRequest) {
     // Validate input
     const { name, email, password } = registerSchema.parse(body)
 
-    // Create auth user
-    const { data: authData, error: authError } = await supabaseAdmin.auth.admin.createUser({
-      email,
-      password,
-      email_confirm: true,
-    })
-
-    if (authError) {
-      return NextResponse.json({ error: authError.message }, { status: 400 })
-    }
-
     // Create username from email
     const username = email
       .split('@')[0]
@@ -35,33 +23,22 @@ export async function POST(req: NextRequest) {
     // Add timestamp to ensure uniqueness
     const uniqueUsername = `${username}${Date.now().toString().slice(-4)}`
 
-    // Create user profile
-    const { data: profile, error: profileError } = await supabaseAdmin
-      .from('users')
-      .insert({
-        id: authData.user.id,
-        email,
-        name,
-        username: uniqueUsername,
-        booking_duration: 30,
-        buffer_time: 0,
-        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      })
-      .select()
-      .single()
-
-    if (profileError) {
-      // Clean up auth user if profile creation fails
-      await supabaseAdmin.auth.admin.deleteUser(authData.user.id)
-      return NextResponse.json({ error: profileError.message }, { status: 400 })
+    // Return demo user profile
+    const profile = {
+      id: 'demo-user-' + Date.now(),
+      email,
+      name,
+      username: uniqueUsername,
+      booking_duration: 30,
+      buffer_time: 0,
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
     }
-
-    // Send welcome email (implement with Resend later)
-    // await sendWelcomeEmail(email, name)
 
     return NextResponse.json({
       user: profile,
-      message: 'Registration successful! Please check your email to confirm your account.',
+      message: 'Registration successful! Welcome to MyPrintSource AI.',
     })
   } catch (error: any) {
     if (error instanceof z.ZodError) {

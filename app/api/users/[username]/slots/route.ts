@@ -1,6 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabaseAdmin } from '@/lib/supabase-admin'
 import { parseISO, format, addMinutes, getDay, startOfDay, endOfDay } from 'date-fns'
+
+// Demo data
+const demoUser = {
+  id: 'demo-user-123',
+  username: 'demo-user',
+  booking_duration: 30,
+  buffer_time: 0,
+  timezone: 'America/New_York',
+}
+
+const demoAvailabilities = [
+  { user_id: 'demo-user-123', day_of_week: 1, start_time: '09:00', end_time: '17:00', is_active: true },
+  { user_id: 'demo-user-123', day_of_week: 2, start_time: '09:00', end_time: '17:00', is_active: true },
+  { user_id: 'demo-user-123', day_of_week: 3, start_time: '09:00', end_time: '17:00', is_active: true },
+  { user_id: 'demo-user-123', day_of_week: 4, start_time: '09:00', end_time: '17:00', is_active: true },
+  { user_id: 'demo-user-123', day_of_week: 5, start_time: '09:00', end_time: '17:00', is_active: true },
+]
 
 // GET /api/users/[username]/slots - Get available time slots for a date (public)
 export async function GET(
@@ -19,53 +35,31 @@ export async function GET(
     const date = parseISO(dateStr)
     const dayOfWeek = getDay(date)
 
-    // Get user
-    const { data: user, error: userError } = await supabaseAdmin
-      .from('users')
-      .select('*')
-      .eq('username', username)
-      .single()
-
-    if (userError || !user) {
-      return NextResponse.json({ error: 'User not found' }, { status: 404 })
-    }
-
     // Get user's availability for this day of week
-    const { data: availabilities, error: availError } = await supabaseAdmin
-      .from('availabilities')
-      .select('*')
-      .eq('user_id', user.id)
-      .eq('day_of_week', dayOfWeek)
-      .eq('is_active', true)
+    const availabilities = demoAvailabilities.filter(
+      (a) => a.day_of_week === dayOfWeek && a.is_active
+    )
 
-    if (availError) {
-      return NextResponse.json({ error: availError.message }, { status: 400 })
-    }
-
-    if (!availabilities || availabilities.length === 0) {
+    if (availabilities.length === 0) {
       return NextResponse.json({ slots: [] })
     }
 
-    // Get existing bookings for this date
-    const startOfDayStr = startOfDay(date).toISOString()
-    const endOfDayStr = endOfDay(date).toISOString()
-
-    const { data: bookings, error: bookingsError } = await supabaseAdmin
-      .from('bookings')
-      .select('start_time, end_time')
-      .eq('user_id', user.id)
-      .eq('status', 'confirmed')
-      .gte('start_time', startOfDayStr)
-      .lte('start_time', endOfDayStr)
-
-    if (bookingsError) {
-      return NextResponse.json({ error: bookingsError.message }, { status: 400 })
-    }
+    // Demo bookings (some times already booked)
+    const bookings = [
+      {
+        start_time: new Date(date.getFullYear(), date.getMonth(), date.getDate(), 10, 0).toISOString(),
+        end_time: new Date(date.getFullYear(), date.getMonth(), date.getDate(), 10, 30).toISOString(),
+      },
+      {
+        start_time: new Date(date.getFullYear(), date.getMonth(), date.getDate(), 14, 0).toISOString(),
+        end_time: new Date(date.getFullYear(), date.getMonth(), date.getDate(), 14, 30).toISOString(),
+      },
+    ]
 
     // Generate time slots
     const slots: { time: string; available: boolean }[] = []
-    const slotDuration = user.booking_duration || 30
-    const bufferTime = user.buffer_time || 0
+    const slotDuration = demoUser.booking_duration || 30
+    const bufferTime = demoUser.buffer_time || 0
 
     for (const availability of availabilities) {
       const [startHour, startMin] = availability.start_time.split(':').map(Number)

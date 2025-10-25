@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabaseAdmin } from '@/lib/supabase-admin'
 import { cookies } from 'next/headers'
 
 export async function GET(req: NextRequest) {
@@ -11,22 +10,17 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    // Verify token and get user
-    const { data: { user }, error } = await supabaseAdmin.auth.getUser(token.value)
-
-    if (error || !user) {
-      return NextResponse.json({ error: 'Invalid token' }, { status: 401 })
-    }
-
-    // Get user profile
-    const { data: profile, error: profileError } = await supabaseAdmin
-      .from('users')
-      .select('*')
-      .eq('id', user.id)
-      .single()
-
-    if (profileError || !profile) {
-      return NextResponse.json({ error: 'User profile not found' }, { status: 404 })
+    // Return demo user profile
+    const profile = {
+      id: 'demo-user-123',
+      email: 'demo@myprintsource.com',
+      full_name: 'Demo User',
+      username: 'demo-user',
+      timezone: 'America/New_York',
+      booking_duration: 30,
+      buffer_time: 0,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
     }
 
     return NextResponse.json({ user: profile })

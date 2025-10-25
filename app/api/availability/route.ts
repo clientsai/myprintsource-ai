@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabaseAdmin } from '@/lib/supabase-admin'
 import { cookies } from 'next/headers'
 import { z } from 'zod'
 
@@ -14,6 +13,15 @@ const availabilitySchema = z.object({
   ),
 })
 
+// Demo availability data
+const demoAvailability = [
+  { id: '1', user_id: 'demo-user-123', day_of_week: 1, start_time: '09:00', end_time: '17:00', is_active: true },
+  { id: '2', user_id: 'demo-user-123', day_of_week: 2, start_time: '09:00', end_time: '17:00', is_active: true },
+  { id: '3', user_id: 'demo-user-123', day_of_week: 3, start_time: '09:00', end_time: '17:00', is_active: true },
+  { id: '4', user_id: 'demo-user-123', day_of_week: 4, start_time: '09:00', end_time: '17:00', is_active: true },
+  { id: '5', user_id: 'demo-user-123', day_of_week: 5, start_time: '09:00', end_time: '17:00', is_active: true },
+]
+
 // GET /api/availability - Get user's availability
 export async function GET(req: NextRequest) {
   try {
@@ -24,25 +32,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    // Get user
-    const { data: { user }, error: userError } = await supabaseAdmin.auth.getUser(token.value)
-    if (userError || !user) {
-      return NextResponse.json({ error: 'Invalid token' }, { status: 401 })
-    }
-
-    // Get availability
-    const { data: availability, error } = await supabaseAdmin
-      .from('availabilities')
-      .select('*')
-      .eq('user_id', user.id)
-      .order('day_of_week')
-      .order('start_time')
-
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 400 })
-    }
-
-    return NextResponse.json({ availability: availability || [] })
+    return NextResponse.json({ availability: demoAvailability })
   } catch (error: any) {
     return NextResponse.json({ error: error.message || 'Internal server error' }, { status: 500 })
   }
@@ -58,45 +48,17 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    // Get user
-    const { data: { user }, error: userError } = await supabaseAdmin.auth.getUser(token.value)
-    if (userError || !user) {
-      return NextResponse.json({ error: 'Invalid token' }, { status: 401 })
-    }
-
     const body = await req.json()
     const { availability } = availabilitySchema.parse(body)
 
-    // Delete existing availability
-    const { error: deleteError } = await supabaseAdmin
-      .from('availabilities')
-      .delete()
-      .eq('user_id', user.id)
+    // Return the submitted availability with IDs
+    const availabilityWithIds = availability.map((slot, index) => ({
+      ...slot,
+      id: 'avail-' + (index + 1),
+      user_id: 'demo-user-123',
+    }))
 
-    if (deleteError) {
-      return NextResponse.json({ error: deleteError.message }, { status: 400 })
-    }
-
-    // Insert new availability
-    if (availability.length > 0) {
-      const availabilityWithUser = availability.map(slot => ({
-        ...slot,
-        user_id: user.id,
-      }))
-
-      const { data, error: insertError } = await supabaseAdmin
-        .from('availabilities')
-        .insert(availabilityWithUser)
-        .select()
-
-      if (insertError) {
-        return NextResponse.json({ error: insertError.message }, { status: 400 })
-      }
-
-      return NextResponse.json({ availability: data })
-    }
-
-    return NextResponse.json({ availability: [] })
+    return NextResponse.json({ availability: availabilityWithIds })
   } catch (error: any) {
     if (error instanceof z.ZodError) {
       return NextResponse.json({ error: error.errors[0].message }, { status: 400 })

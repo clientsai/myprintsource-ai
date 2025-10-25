@@ -1,5 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabaseAdmin } from '@/lib/supabase-admin'
+
+// Demo user data
+const demoUser = {
+  id: 'demo-user-123',
+  name: 'Demo User',
+  username: 'demo-user',
+  avatar_url: null,
+  booking_duration: 30,
+  buffer_time: 0,
+  timezone: 'America/New_York',
+}
 
 // GET /api/users/[username] - Get user by username (public)
 export async function GET(
@@ -9,18 +19,14 @@ export async function GET(
   try {
     const username = params.username.toLowerCase()
 
-    // Get user profile
-    const { data: user, error } = await supabaseAdmin
-      .from('users')
-      .select('id, name, username, avatar_url, booking_duration, buffer_time, timezone')
-      .eq('username', username)
-      .single()
-
-    if (error || !user) {
-      return NextResponse.json({ error: 'User not found' }, { status: 404 })
-    }
-
-    return NextResponse.json({ user })
+    // Return demo user for any username
+    return NextResponse.json({
+      user: {
+        ...demoUser,
+        username,
+        name: 'MyPrintSource Demo',
+      },
+    })
   } catch (error: any) {
     return NextResponse.json({ error: error.message || 'Internal server error' }, { status: 500 })
   }

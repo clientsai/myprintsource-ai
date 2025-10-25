@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabaseAdmin } from '@/lib/supabase-admin'
 import { z } from 'zod'
 import { cookies } from 'next/headers'
 
@@ -15,36 +14,28 @@ export async function POST(req: NextRequest) {
     // Validate input
     const { email, password } = loginSchema.parse(body)
 
-    // Sign in user
-    const { data: authData, error: authError } = await supabaseAdmin.auth.signInWithPassword({
-      email,
-      password,
-    })
-
-    if (authError) {
-      return NextResponse.json({ error: 'Invalid email or password' }, { status: 401 })
-    }
-
-    // Get user profile
-    const { data: profile, error: profileError } = await supabaseAdmin
-      .from('users')
-      .select('*')
-      .eq('id', authData.user.id)
-      .single()
-
-    if (profileError || !profile) {
-      return NextResponse.json({ error: 'User profile not found' }, { status: 404 })
+    // Demo user profile
+    const profile = {
+      id: 'demo-user-123',
+      email: email,
+      full_name: 'Demo User',
+      username: 'demo-user',
+      timezone: 'America/New_York',
+      booking_duration: 30,
+      buffer_time: 0,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
     }
 
     // Set session cookies
     const cookieStore = await cookies()
-    cookieStore.set('access-token', authData.session.access_token, {
+    cookieStore.set('access-token', 'demo-access-token-' + Date.now(), {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
       maxAge: 60 * 60 * 24 * 7, // 7 days
     })
-    cookieStore.set('refresh-token', authData.session.refresh_token, {
+    cookieStore.set('refresh-token', 'demo-refresh-token-' + Date.now(), {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',

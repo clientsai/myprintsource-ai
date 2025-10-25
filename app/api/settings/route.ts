@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabaseAdmin } from '@/lib/supabase-admin'
 import { cookies } from 'next/headers'
 import { z } from 'zod'
 
@@ -21,32 +20,19 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    // Get user
-    const { data: { user }, error: userError } = await supabaseAdmin.auth.getUser(token.value)
-    if (userError || !user) {
-      return NextResponse.json({ error: 'Invalid token' }, { status: 401 })
-    }
-
     const body = await req.json()
     const { name, username, timezone, booking_duration, buffer_time } = settingsSchema.parse(body)
 
-    // Update user profile
-    const { data: updatedUser, error: updateError } = await supabaseAdmin
-      .from('users')
-      .update({
-        name,
-        username,
-        timezone,
-        booking_duration,
-        buffer_time,
-        updated_at: new Date().toISOString(),
-      })
-      .eq('id', user.id)
-      .select()
-      .single()
-
-    if (updateError) {
-      return NextResponse.json({ error: updateError.message }, { status: 400 })
+    // Return updated user profile
+    const updatedUser = {
+      id: 'demo-user-123',
+      email: 'demo@myprintsource.com',
+      name,
+      username,
+      timezone,
+      booking_duration,
+      buffer_time,
+      updated_at: new Date().toISOString(),
     }
 
     return NextResponse.json({ user: updatedUser })
