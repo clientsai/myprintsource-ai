@@ -13,10 +13,10 @@ export default function HomePage() {
               <Image
                 src="/brand/logo-myprintsource.png"
                 alt="MyPrintSource - Powered by AI"
-                width={240}
-                height={60}
+                width={280}
+                height={70}
                 priority
-                className="h-16 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
             <nav className="flex items-center space-x-6">
@@ -207,13 +207,15 @@ export default function HomePage() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <Image
-                src="/brand/logo-myprintsource.png"
-                alt="MyPrintSource"
-                width={150}
-                height={40}
-                className="h-10 w-auto mb-4"
-              />
+              <Link href="/" className="hover:opacity-80 transition-opacity">
+                <Image
+                  src="/brand/logo-myprintsource.png"
+                  alt="MyPrintSource"
+                  width={200}
+                  height={50}
+                  className="h-14 w-auto mb-4"
+                />
+              </Link>
               <p className="text-sm text-gray-600">
                 AI that creates world-class marketing materials designed to convert—delivered to your door in under an hour.
               </p>
