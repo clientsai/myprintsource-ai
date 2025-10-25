@@ -34,12 +34,12 @@ export default function HelpPage() {
                   <p className="mt-3 text-gray-600">Click &quot;Get Started Free&quot; on any page, enter your email and create a password. No credit card required for the free Starter plan.</p>
                 </details>
                 <details className="card p-6">
-                  <summary className="font-semibold cursor-pointer">What file formats do you accept?</summary>
-                  <p className="mt-3 text-gray-600">We accept PDF, AI, PSD, EPS, JPG, PNG, and TIFF files. Our AI automatically optimizes any format for commercial printing.</p>
+                  <summary className="font-semibold cursor-pointer">What information does AI need to create my campaign?</summary>
+                  <p className="mt-3 text-gray-600">Simply provide your website URL, industry, and campaign goals. Our AI scans your business, analyzes your target audience, and generates complete print-ready marketing materials—no design files needed.</p>
                 </details>
                 <details className="card p-6">
-                  <summary className="font-semibold cursor-pointer">How does AI optimization work?</summary>
-                  <p className="mt-3 text-gray-600">Upload your file and our AI analyzes resolution, color profiles, bleeds, and print readiness. It automatically corrects common issues and suggests improvements—all in seconds.</p>
+                  <summary className="font-semibold cursor-pointer">How does AI design generation work?</summary>
+                  <p className="mt-3 text-gray-600">Our AI analyzes your business in seconds, identifies your ideal customer&apos;s pain points, generates conversion-optimized copy and design, then outputs print-ready materials. Everything from headlines to layouts is scientifically engineered to convert.</p>
                 </details>
               </div>
             </section>
@@ -48,8 +48,8 @@ export default function HelpPage() {
               <h2 className="text-2xl font-semibold mb-4">Ordering & Pricing</h2>
               <div className="space-y-4">
                 <details className="card p-6">
-                  <summary className="font-semibold cursor-pointer">How do I get a quote?</summary>
-                  <p className="mt-3 text-gray-600">Upload your file and our AI instantly generates a detailed quote with material options, quantities, and shipping costs. Review and approve with one click.</p>
+                  <summary className="font-semibold cursor-pointer">How do I get started with my first campaign?</summary>
+                  <p className="mt-3 text-gray-600">Tell us about your business and campaign goals. AI instantly generates complete designs with material recommendations, quantities, and pricing. Review, refine, and approve—then we print and deliver in under 60 minutes.</p>
                 </details>
                 <details className="card p-6">
                   <summary className="font-semibold cursor-pointer">What payment methods do you accept?</summary>
