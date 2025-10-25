@@ -38,7 +38,8 @@ export default function HomePage() {
         <div className="container mx-auto px-6 relative">
           <div className="text-center max-w-5xl mx-auto">
             <h1 className="text-7xl font-bold text-gray-950 mb-6 leading-tight tracking-tight">
-              AI-Generated Marketing Materials
+              AI-Generated Marketing Materials.{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent">In Seconds.</span>
             </h1>
             <p className="text-3xl text-gray-700 mb-8 leading-relaxed max-w-4xl mx-auto font-medium">
               In the time it takes to schedule a design meeting, our AI analyzes your business and delivers print-ready marketing materials to your door.
